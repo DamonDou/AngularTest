@@ -1,0 +1,13 @@
+<h2>{{hero.name | uppercase}} Details</h2>
+<div><span>name:{{hero.name}}</span></div>
+<div><span>id:{{hero.id}}</span></div>
+<div>
+  <label>Name:</label>
+  <input [(ngModel)]="hero.name" placeholder="name">
+
+</div>
+
+<h2>My Heros</h2>
+<ul class="heroes">
+  <li *ngFor='let hero of heros'><span class="badge">{{hero.name}}</span></li>
+</ul>

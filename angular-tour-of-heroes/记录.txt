@@ -1,0 +1,9 @@
+1. Component 创建了以后，需要在app.module.ts 中引入，在NgModule中声名
+
+2. 双向绑定[(ngModule)],需要在app.module.ts中引入 import { FormsModule } from '@angular/forms'
+
+   添加到NgModule的Import的数组中
+
+3. 管道   通过“|”使用 ，用来格式化字符串
+
+4. *ngFor='let item of list'  重复器
