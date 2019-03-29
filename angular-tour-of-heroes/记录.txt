@@ -7,3 +7,23 @@
 3. 管道   通过“|”使用 ，用来格式化字符串
 
 4. *ngFor='let item of list'  重复器
+
+5. 绑定事件 (click)="" 
+
+6. *ngIf="model" 判断器，当model不是null或者undifined时，显示内容
+
+7. class绑定，[class.selected]="hero === selectedHero" 当条件为true时，应用样式
+
+8. 子组件中声明外部输入的属性 
+
+    import { Input } from '@angular/core';
+
+    @Input()  selectedHero:Hero;
+
+    使用时在组件中 [selectedHero]="value" 进行属性绑定
+
+9. 通过@Input()装饰器 声明的变量,[selectedHero]，是单向绑定的。父组件中数据的变化会影响到子组件，子组件中数据的变化不会影响父组件中的数据。
+
+   除非传递到子组件中的数据的类型是引用类型，这时子组件中数据的变化会影响父组件中的数据
+
+10. 
