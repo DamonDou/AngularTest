@@ -26,4 +26,41 @@
 
    除非传递到子组件中的数据的类型是引用类型，这时子组件中数据的变化会影响父组件中的数据
 
-10. 
+10. 服务
+
+    ng generate service XXX
+
+    导入 Injectable 
+
+    使用@Injectable()装饰器 将服务添加到依赖注入系统
+
+    providedIn表示注入的位置
+
+11. 将组件的属性绑定到页面上时，必须是公有属性，Angular只会将公有属性绑定到页面
+
+12. 当组件或者服务中的属性是引用类型时，当其他组件中将属性赋值给变量后，属性重新赋值为一个新的内存区域后，变量中的值会和属性的值不一致。
+
+    因为变量指向的内存区域的内容没有改变，属性指向了新的内存区域。
+
+    为了避免这种问题，直接使用服务或者组件中的属性，不要再转存。或者组件或者服务的属性不要使用新的内存区域，始终在原始的内容区域内修改数据
+
+ 13. 路由
+    
+    添加路由模块，一般路由模块是一个独立的模块，然后在AppModule中引入
+
+    ng generate module app-routing --flat --module=app
+
+    --flat 表示 把这个文件放进了 src/app 中，而不是单独的目录中
+    --module=app 表示在AppModule中引入这个模块
+
+    路由信息定义在全局变量routes中
+
+    使用 imports: [ RouterModule.forRoot(routes) ],初始化路由以及监听地址栏变化
+
+    路由出口 <router-outlet></router-outlet>，路由模块会把内容输出到这个标签的位置
+
+    路由链接  <a routerLink="/heroes">Heroes</a> routetLink 属性会将路由跳转到对应的组件
+
+    默认路由 { path: '', redirectTo: '/dashboard', pathMatch: 'full' }
+
+    路由未完。。。。

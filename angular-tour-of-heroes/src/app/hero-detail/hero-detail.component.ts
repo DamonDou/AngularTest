@@ -1,5 +1,6 @@
 import { Component, OnInit,Input } from '@angular/core';
 import {Hero} from '../Hero';
+import {MessageService} from '../message.service';
 
 @Component({
   selector: 'app-hero-detail',
@@ -8,7 +9,7 @@ import {Hero} from '../Hero';
 })
 export class HeroDetailComponent implements OnInit {
 
-  constructor() { } 
+  constructor(private messageServie :MessageService) { } 
 
   @Input()  selectedHero:Hero;
 

@@ -10,11 +10,12 @@ export class MessageService {
   constructor() { }
 
   add(message:string){
-
+    this.message.push(message);
   }
 
   clear(){
-    this.message=[];
+    this.message = [];
+    //this.message.splice(0,this.message.length);
   }
 
 }

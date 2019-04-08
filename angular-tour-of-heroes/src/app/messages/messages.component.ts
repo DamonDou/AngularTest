@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import{MessageService} from '../message.service';
+
 
 @Component({
   selector: 'app-messages',
@@ -7,9 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MessagesComponent implements OnInit {
 
-  constructor() { }
+  constructor(public messsageServie:MessageService) {
+
+   }
 
   ngOnInit() {
+    this.messageList = this.messsageServie.message;
+  }
+
+  messageList:string[];
+
+  clear():void{
+    this.messsageServie.clear();
   }
 
 }

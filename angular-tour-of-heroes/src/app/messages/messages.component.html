@@ -1,3 +1,4 @@
-<p>
-  messages works!
-</p>
+<button (click)="clear()">Clear</button>
+<ul *ngIf="messsageServie.message.length">
+  <li *ngFor="let message of messsageServie.message">{{message}}</li>
+</ul>
