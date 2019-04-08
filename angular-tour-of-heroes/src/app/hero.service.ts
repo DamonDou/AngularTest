@@ -18,4 +18,10 @@ export class HeroService {
 
   }
 
+  getHero(id:number):Observable<Hero>{
+    
+    this.messageService.add(`HeroService: fetched hero id=${id}`);
+    return of( HEROS.find(a=>a.id === id));
+  }
+
 }

@@ -63,4 +63,17 @@
 
     默认路由 { path: '', redirectTo: '/dashboard', pathMatch: 'full' }
 
-    路由未完。。。。
+    在路由中定义参数 {path:"/detail/:id"}
+
+    在页面中获取Url传递过来的参数
+
+    1. import {ActivatedRoute} from '@angular/router'
+    2. import {Location} from '@angular/common'
+    3. 通过构造函数注入 private route:ActivatedRoute,private location:Location
+    4. 通过this.route.snapshot.paramMap.get("id");取url中的参数值
+    5. 通过this.location.back() 返回上一页
+
+
+14. 组件，紧跟在@Component{} 后面的类 声明为一个组件
+
+15. 服务，紧跟在@Injectable{} 后面的类 声明为一个服务
